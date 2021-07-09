@@ -25,17 +25,14 @@ if(readonly == "true") {
 	readonly = false;
 }
 
-//Console log every parameter in url
-urlParams.forEach(
-	param => console.log(param)
-)
-
 </script>
 	<main>
 		<div class:disable={readonly}>
+
 			<Modal header="Information" message="Here is some information" isInfo={true} {showModal} on:click={toggleModal}/>
 			<button on:click={toggleModal}>?</button>
 			<AddPatientForm  bind:patientName bind:patientId bind:readonly/>
+			
 		</div>
 	</main>
 
